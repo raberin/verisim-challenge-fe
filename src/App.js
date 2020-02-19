@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import { Route } from "react-router-dom";
 import Drugs from "./components/Drugs";
+import Navigation from "./components/Navigation";
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class App extends Component {
   componentDidMount() {
     // Fetching data using axios
     axios
-      .get("http://localhost:5000/api/drugs")
+      .get("https://verisim-be.herokuapp.com/api/drugs")
       .then(res => {
         this.setState({ drugs: res.data });
         console.log(this.state.drugs);
@@ -27,7 +28,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navigation />
         <Route
+          exact
           path="/"
           render={props => <Drugs {...props} drugs={this.state.drugs} />}
         />

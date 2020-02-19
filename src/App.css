@@ -2,6 +2,20 @@
   text-align: center;
 }
 
+.add-button-container {
+  border: 1px solid black;
+  border-radius: 100px;
+  height: 75px;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.add-button {
+  font-size: 64px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

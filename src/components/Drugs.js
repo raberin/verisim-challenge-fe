@@ -4,9 +4,6 @@ import "./Drugs.css";
 import Drug from "./Drug.js";
 
 class Drugs extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
