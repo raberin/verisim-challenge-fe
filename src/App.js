@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./App.css";
 import { Route } from "react-router-dom";
+
 import Drugs from "./components/Drugs";
 import Navigation from "./components/Navigation";
+import DrugForm from "./components/DrugForm";
 
 class App extends Component {
   constructor(props) {
@@ -51,6 +53,10 @@ class App extends Component {
           exact
           path="/"
           render={props => <Drugs {...props} drugs={this.state.drugs} />}
+        />
+        <Route
+          path="/drugs-form"
+          render={props => <DrugForm {...props} addDrug={this.addDrug} />}
         />
       </div>
     );
