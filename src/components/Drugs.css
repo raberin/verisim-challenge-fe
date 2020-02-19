@@ -1,0 +1,13 @@
+.drugsList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.drugCard {
+  border: solid 1px maroon;
+  width: 30%;
+  margin: 2%;
+}
