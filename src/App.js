@@ -25,6 +25,24 @@ class App extends Component {
         console.log(err);
       });
   }
+
+  addDrug = drug => {
+    // Post request, adds a new drug into database
+    axios
+      .post("https://verisim-be.herokuapp.com/api/drugs", drug)
+      .then(res => {
+        this.setState({ drugs: res.data });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
+  updateDrugsState = newDrugsArray => {
+    // Updates state whenever a post/put/del request is made
+    this.setState({ drugs: newDrugsArray });
+  };
+
   render() {
     return (
       <div className="App">
