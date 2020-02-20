@@ -31,7 +31,7 @@ class App extends Component {
   addDrug = drug => {
     // Post request, adds a new drug into database
     axios
-      .post("http://localhost:5000/api/drugs", drug)
+      .post("https://verisim-be.herokuapp.com/api/drugs", drug)
       .then(res => {
         console.log(res.data);
         this.fetchDrugs();
@@ -44,7 +44,7 @@ class App extends Component {
   fetchDrugs = () => {
     // Fetches drugs after modification
     axios
-      .get("http://localhost:5000/api/drugs")
+      .get("https://verisim-be.herokuapp.com/api/drugs")
       .then(res => {
         this.setState({ drugs: res.data });
         console.log(this.state.drugs);

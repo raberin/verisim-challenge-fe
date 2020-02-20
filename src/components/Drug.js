@@ -25,7 +25,7 @@ class Drug extends React.Component {
 
   deleteDrug = () => {
     axios
-      .delete(`http://localhost:5000/api/drugs/${this.props.id}`)
+      .delete(`https://verisim-be.herokuapp.com/${this.props.id}`)
       .then(res => {
         console.log(res);
         this.props.fetchDrugs();
@@ -39,7 +39,7 @@ class Drug extends React.Component {
   updateDrug = updated => {
     // Updates the current item using the updatedPost in state
     axios
-      .put(`http://localhost:5000/api/drugs/${this.props.id}`, updated)
+      .put(`https://verisim-be.herokuapp.com/${this.props.id}`, updated)
       .then(res => {
         console.log(res);
         this.props.fetchDrugs();
