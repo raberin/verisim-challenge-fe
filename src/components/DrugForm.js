@@ -37,6 +37,7 @@ class DrugForm extends Component {
         complexity: ""
       }
     });
+    this.props.history.push(`/`);
   };
 
   handleInputChange = e => {
