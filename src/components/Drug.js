@@ -9,12 +9,12 @@ class Drug extends React.Component {
     this.state = {
       editButtonClicked: false,
       updatedPost: {
-        name: "",
-        iupac_name: "",
-        smiles: "",
-        molecular_formula: "",
+        name: this.props.name,
+        iupac_name: this.props.iupac,
+        smiles: this.props.smiles,
+        molecular_formula: this.props.formula,
         cas_number: "",
-        mw: "",
+        mw: this.props.mw,
         class: "",
         superclass: "",
         rotateable_bond_count: "",
@@ -84,12 +84,12 @@ class Drug extends React.Component {
     this.updateDrug(this.state.updatedPost);
     this.setState({
       updatedPost: {
-        name: "",
-        iupac_name: "",
-        smiles: "",
-        molecular_formula: "",
+        name: this.props.name,
+        iupac_name: this.props.iupac,
+        smiles: this.props.smiles,
+        molecular_formula: this.props.formula,
         cas_number: "",
-        mw: "",
+        mw: this.props.mw,
         class: "",
         superclass: "",
         rotateable_bond_count: "",
