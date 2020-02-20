@@ -18,7 +18,7 @@ class App extends Component {
   componentDidMount() {
     // Fetching data using axios
     axios
-      .get("http://localhost:5000/api/drugs")
+      .get("https://verisim-be.herokuapp.com/api/drugs")
       .then(res => {
         this.setState({ drugs: res.data });
         console.log(this.state.drugs);
