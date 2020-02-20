@@ -8,12 +8,12 @@ class DrugForm extends Component {
         name: "",
         iupac_name: "",
         smiles: "",
-        molecularFormula: "",
-        casNumber: "",
+        molecular_formula: "",
+        cas_number: "",
         mw: "",
         class: "",
         superclass: "",
-        rotateableBondCount: "",
+        rotateable_bond_count: "",
         complexity: ""
       }
     };
@@ -28,12 +28,12 @@ class DrugForm extends Component {
         name: "",
         iupac_name: "",
         smiles: "",
-        molecularFormula: "",
-        casNumber: "",
+        molecular_formula: "",
+        cas_number: "",
         mw: "",
         class: "",
         superclass: "",
-        rotateableBondCount: "",
+        rotateable_bond_count: "",
         complexity: ""
       }
     });
@@ -74,13 +74,13 @@ class DrugForm extends Component {
             onChange={this.handleInputChange}
             placeholder="Molecular Formula"
             value={this.state.drug.molecularFormula}
-            name="molecularFormula"
+            name="molecular_formula"
           />
           <input
             onChange={this.handleInputChange}
             placeholder="CAS Number"
             value={this.state.drug.casNumber}
-            name="casNumber"
+            name="cas_number"
           />
           <input
             onChange={this.handleInputChange}
@@ -104,7 +104,7 @@ class DrugForm extends Component {
             onChange={this.handleInputChange}
             placeholder="Rotateable Bond Count"
             value={this.state.drug.rotateableBondCount}
-            name="rotateableBondCount"
+            name="rotateable_bond_count"
           />
           <input
             onChange={this.handleInputChange}

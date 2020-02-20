@@ -18,7 +18,7 @@ class App extends Component {
   componentDidMount() {
     // Fetching data using axios
     axios
-      .get("https://verisim-be.herokuapp.com/api/drugs")
+      .get("http://localhost:5000/api/drugs")
       .then(res => {
         this.setState({ drugs: res.data });
         console.log(this.state.drugs);
@@ -31,9 +31,12 @@ class App extends Component {
   addDrug = drug => {
     // Post request, adds a new drug into database
     axios
-      .post("https://verisim-be.herokuapp.com/api/drugs", drug)
+      .post("http://localhost:5000/api/drugs", drug)
       .then(res => {
-        this.setState({ drugs: res.data });
+        console.log(res.data);
+        this.setState(prevState => {
+          drugs: prevState.drugs.push(drug);
+        });
       })
       .catch(err => {
         console.log(err);
