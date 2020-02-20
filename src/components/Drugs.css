@@ -22,3 +22,41 @@
   padding-left: 8px;
   padding-right: 8px;
 }
+.drugButtons-edit {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.display-on {
+  display: block;
+}
+
+.display-on-edit {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.display-off {
+  display: none;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: center;
+}
+
+.submit-btn {
+  height: 25px;
+  border: 1px solid black;
+  width: 20%;
+  position: relative;
+  left: 125px;
+  margin-bottom: 10px;
+}
