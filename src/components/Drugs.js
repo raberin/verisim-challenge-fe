@@ -12,7 +12,7 @@ const Drugs = props => {
         {props.drugs.map(drug => {
           return (
             <Drug
-              updateDrugs={props.updateDrugs}
+              fetchDrugs={props.fetchDrugs}
               name={drug.name}
               id={drug.id}
               iupac={drug.iupac_name}

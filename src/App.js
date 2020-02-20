@@ -28,24 +28,20 @@ class App extends Component {
       });
   }
 
-  getDrugs = () => {};
-
   addDrug = drug => {
     // Post request, adds a new drug into database
     axios
       .post("http://localhost:5000/api/drugs", drug)
       .then(res => {
         console.log(res.data);
-        this.setState(prevState => {
-          prevState.drugs.push(drug);
-        });
+        this.fetchDrugs();
       })
       .catch(err => {
         console.log(err);
       });
   };
 
-  updateDrugsState = () => {
+  fetchDrugs = () => {
     // Fetches drugs after modification
     axios
       .get("http://localhost:5000/api/drugs")
@@ -68,7 +64,7 @@ class App extends Component {
           render={props => (
             <Drugs
               {...props}
-              updateDrugs={this.updateDrugsState}
+              fetchDrugs={this.fetchDrugs}
               drugs={this.state.drugs}
             />
           )}

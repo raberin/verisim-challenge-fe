@@ -9,7 +9,7 @@ const Drug = props => {
       .delete(`http://localhost:5000/api/drugs/${props.id}`)
       .then(res => {
         console.log(res);
-        props.updateDrugs();
+        props.fetchDrugs();
         alert(`${props.name} has been deleted!`);
       })
       .catch(err => {
