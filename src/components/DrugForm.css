@@ -1,0 +1,18 @@
+.DrugForm {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.formSubmit {
+  border: solid 1px maroon;
+  margin-top: 20px;
+}

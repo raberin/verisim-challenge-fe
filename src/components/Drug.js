@@ -20,13 +20,17 @@ const Drug = props => {
   return (
     <div className="drugCard">
       <div className="drugButtons">
-        <span onClick={deleteDrug}>X</span>
+        <span className="x-button" onClick={deleteDrug}>
+          X
+        </span>
       </div>
-      <h3>{props.name}</h3>
-      <p>Molecular Formula: {props.molecular_formula}</p>
-      <p>IUPAC: {props.iupac}</p>
-      <p>SMILES: {props.smiles}</p>
-      <p>Molecular Weight: {props.mw}</p>
+      <div className="drugContent">
+        <h3>{props.name}</h3>
+        <p>Molecular Formula: {props.formula}</p>
+        <p>IUPAC: {props.iupac}</p>
+        <p>SMILES: {props.smiles}</p>
+        <p>Molecular Weight: {props.mw}</p>
+      </div>
     </div>
   );
 };

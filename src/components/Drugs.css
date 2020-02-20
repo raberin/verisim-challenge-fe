@@ -1,6 +1,6 @@
 .drugsList {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
@@ -8,6 +8,16 @@
 
 .drugCard {
   border: solid 1px maroon;
-  width: 30%;
-  margin: 2%;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1%;
+  /* padding-bottom: 20px; */
+}
+
+.drugButtons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 7px;
 }
