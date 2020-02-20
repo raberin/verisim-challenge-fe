@@ -28,6 +28,8 @@ class App extends Component {
       });
   }
 
+  getDrugs = () => {};
+
   addDrug = drug => {
     // Post request, adds a new drug into database
     axios
@@ -35,7 +37,7 @@ class App extends Component {
       .then(res => {
         console.log(res.data);
         this.setState(prevState => {
-          drugs: prevState.drugs.push(drug);
+          prevState.drugs.push(drug);
         });
       })
       .catch(err => {
@@ -43,9 +45,17 @@ class App extends Component {
       });
   };
 
-  updateDrugsState = newDrugsArray => {
-    // Updates state whenever a post/put/del request is made
-    this.setState({ drugs: newDrugsArray });
+  updateDrugsState = () => {
+    // Fetches drugs after modification
+    axios
+      .get("http://localhost:5000/api/drugs")
+      .then(res => {
+        this.setState({ drugs: res.data });
+        console.log(this.state.drugs);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   render() {
@@ -55,7 +65,13 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={props => <Drugs {...props} drugs={this.state.drugs} />}
+          render={props => (
+            <Drugs
+              {...props}
+              updateDrugs={this.updateDrugsState}
+              drugs={this.state.drugs}
+            />
+          )}
         />
         <Route
           path="/drugs-form"
